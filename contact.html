@@ -1,0 +1,58 @@
+
+{% extends 'base.html' %}
+{%  block  content %}
+{% load static %}
+
+    <div class="contact">
+        <div class="container-fluid">
+            <h2 class="text-capitalize">get in touch</h2>
+            <div class="underline mb-5"></div>
+            <div class="row justify-content-between">
+                <div class="forms col-lg-6">
+                    <form class="px-1" action="" method="POST">
+                        {% csrf_token %}
+                        <input class="p-2 pl-5" type="text" name="name" placeholder="Full Name">
+                        <input class="p-2" type="text" name="email" placeholder="Email Address">
+                        <input class="p-2" type="text" name="subject" placeholder="Subject">
+                        <textarea class="p-2" name="message" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                        <input class="px-4 py-2 mt-4" type="submit" value="Send Message">
+                    </form>
+                </div>
+                <div class="contact_img col-lg-5">
+                    <img class="w-100" src="{% static 'img/contact.jpg' %}" alt="">
+                </div>
+            </div>
+
+            <br>
+            <div class="row infos justify-content-center">
+                <div class="row col-lg-5 mt-5 ">
+                    <div class="col-3 text-center">
+                        <img src="{% static 'img/smartphone.png' %}" alt="">
+                    </div>
+                    <div class="col-7 contents">
+                        <h6>
+                            <a href="tel:+917994010405">7994010405</a>
+                        </h6>
+                        <p> Personal mobile number to contact  </p>
+                    </div>
+                </div>
+                <div class="row col-lg-5 mt-5 ">
+                    <div class="col-3 text-center">
+                        <img src="{% static 'img/gmail (1).png' %} " alt="">
+                    </div>
+                    <div class="col-7 contents px-0">
+                        <h6>
+                           <a href="mailto:anfas.mehaboob@gmail.com">
+                            anfas.mehaboob@gmail.com
+                           </a>
+                        </h6>
+                        <p> Personal mail address you can mail </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+ 
+{% endblock %}
+    
